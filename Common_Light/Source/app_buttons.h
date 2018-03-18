@@ -110,7 +110,7 @@
         #define APP_BUTTONS_NUM             (5UL)
     #if (JENNIC_CHIP_FAMILY == JN516x)
         #define APP_BUTTONS_BUTTON_1        (15)
-		#define APP_BUTTONS_BULB_0			(12)
+		#define APP_BUTTONS_BULB_0			(5)
 		#define APP_BUTTONS_BULB_1			(4)
 		#define APP_BUTTONS_BULB_2			(19)
 		#define APP_BUTTONS_BULB_3			(18)

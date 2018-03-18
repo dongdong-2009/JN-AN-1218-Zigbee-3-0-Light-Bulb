@@ -8754,8 +8754,6 @@ Discarded input sections
                 0x0000000000000000       0x31 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Timer.o)
  .text.u16AHI_TimerReadCount
                 0x0000000000000000       0x1a ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Timer.o)
- .text.vAHI_TimerFineGrainDIOControl
-                0x0000000000000000        0x7 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Timer.o)
  .text.vAHI_TimerConfigure
                 0x0000000000000000       0x31 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Timer.o)
  .text.vAHI_TimerSetLocation
@@ -8990,8 +8988,6 @@ Discarded input sections
                 0x0000000000000000       0x5c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
  .text.u16AHI_UartBlockReadData
                 0x0000000000000000       0x50 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
- .text.vAHI_UartSetRTSCTS
-                0x0000000000000000       0x1f ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
  .text.vAHI_UartSetLocation
                 0x0000000000000000       0x28 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
  .text.vAHI_IntHandlerUart0
@@ -10015,8 +10011,8 @@ LOAD d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
                 0x000000000008001c        0x2 SHORT 0x0
                 0x000000000008001e        0x2 SHORT 0x0 ABSOLUTE (_SwConfig)
                 0x0000000000080020                _enc_start = ABSOLUTE (.)
-                0x0000000000080020        0x4 LONG 0x2a7b8 ABSOLUTE (_image_len)
-                0x0000000000080024        0x4 LONG 0xaa094 ABSOLUTE (_flash_data_start)
+                0x0000000000080020        0x4 LONG 0x2a7e0 ABSOLUTE (_image_len)
+                0x0000000000080024        0x4 LONG 0xaa0bc ABSOLUTE (_flash_data_start)
                 0x0000000000080028        0x2 SHORT 0x13 ((ABSOLUTE (_ram_data_start) / 0x4) & 0xffff)
                 0x000000000008002a        0x2 SHORT 0x1c9 ((ABSOLUTE (_ram_data_len) / 0x4) & 0xffff)
                 0x000000000008002c        0x2 SHORT 0x1dc ((ABSOLUTE (_bss_start) / 0x4) & 0xffff)
@@ -10373,7 +10369,7 @@ LOAD d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
  .rodata.au8SpeedCodeToEepromClkDivisors
                 0x0000000000081a00        0x8 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
 
-.text           0x0000000000081a08    0x28689
+.text           0x0000000000081a08    0x286b1
  *(.text*)
  .text          0x0000000000081a08       0x50 ../../DimmableLight/Build/irq_JN516x.o
                 0x0000000000081a08                PIC_ChannelPriorities
@@ -10453,233 +10449,233 @@ LOAD d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
  .text.vPdmEventHandlerCallback
                 0x0000000000082080       0xa4 ../../DimmableLight/Build/app_start_light.o
  .text.vAppMain
-                0x0000000000082124       0xb9 ../../DimmableLight/Build/app_start_light.o
+                0x0000000000082124       0xc1 ../../DimmableLight/Build/app_start_light.o
                 0x0000000000082124                vAppMain
  .text.vAppRegisterPWRMCallbacks
-                0x00000000000821dd        0x3 ../../DimmableLight/Build/app_start_light.o
-                0x00000000000821dd                vAppRegisterPWRMCallbacks
+                0x00000000000821e5        0x3 ../../DimmableLight/Build/app_start_light.o
+                0x00000000000821e5                vAppRegisterPWRMCallbacks
  .text.vSaveScenesNVM
-                0x00000000000821e0       0xa6 ../../DimmableLight/Build/app_scenes.o
-                0x00000000000821e0                vSaveScenesNVM
+                0x00000000000821e8       0xa6 ../../DimmableLight/Build/app_scenes.o
+                0x00000000000821e8                vSaveScenesNVM
  .text.vLoadScenesNVM
-                0x0000000000082286       0xa9 ../../DimmableLight/Build/app_scenes.o
-                0x0000000000082286                vLoadScenesNVM
+                0x000000000008228e       0xa9 ../../DimmableLight/Build/app_scenes.o
+                0x000000000008228e                vLoadScenesNVM
  .text.APP_vRemoveAllGroupsAndScenes
-                0x000000000008232f       0x13 ../../DimmableLight/Build/app_scenes.o
-                0x000000000008232f                APP_vRemoveAllGroupsAndScenes
+                0x0000000000082337       0x13 ../../DimmableLight/Build/app_scenes.o
+                0x0000000000082337                APP_vRemoveAllGroupsAndScenes
  .text.APP_vFactoryResetRecords
-                0x0000000000082342       0x54 ../../DimmableLight/Build/app_zlo_light_node.o
-                0x0000000000082342                APP_vFactoryResetRecords
- *fill*         0x0000000000082396        0x2 00
+                0x000000000008234a       0x54 ../../DimmableLight/Build/app_zlo_light_node.o
+                0x000000000008234a                APP_vFactoryResetRecords
+ *fill*         0x000000000008239e        0x2 00
  .text.APP_taskLight
-                0x0000000000082398      0x13c ../../DimmableLight/Build/app_zlo_light_node.o
-                0x0000000000082398                APP_taskLight
+                0x00000000000823a0      0x13c ../../DimmableLight/Build/app_zlo_light_node.o
+                0x00000000000823a0                APP_taskLight
  .text.APP_vBdbCallback
-                0x00000000000824d4      0x2a0 ../../DimmableLight/Build/app_zlo_light_node.o
-                0x00000000000824d4                APP_vBdbCallback
+                0x00000000000824dc      0x2a0 ../../DimmableLight/Build/app_zlo_light_node.o
+                0x00000000000824dc                APP_vBdbCallback
  .text.APP_vInitialiseNode
-                0x0000000000082774      0x1ad ../../DimmableLight/Build/app_zlo_light_node.o
-                0x0000000000082774                APP_vInitialiseNode
+                0x000000000008277c      0x1ad ../../DimmableLight/Build/app_zlo_light_node.o
+                0x000000000008277c                APP_vInitialiseNode
  .text.vCopyRecordsToZCL
-                0x0000000000082921       0x3f ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082929       0x3f ../../DimmableLight/Build/app_zcl_light_task.o
  .text.vSaveZCLRecord
-                0x0000000000082960       0xe5 ../../DimmableLight/Build/app_zcl_light_task.o
- *fill*         0x0000000000082a45        0x3 00
+                0x0000000000082968       0xe5 ../../DimmableLight/Build/app_zcl_light_task.o
+ *fill*         0x0000000000082a4d        0x3 00
  .text.APP_ZCL_cbGeneralCallback
-                0x0000000000082a48       0x94 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082a50       0x94 ../../DimmableLight/Build/app_zcl_light_task.o
  .text.APP_ZCL_OnOffLight_3_cbEndpointCallback
-                0x0000000000082adc       0x91 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082ae4       0x91 ../../DimmableLight/Build/app_zcl_light_task.o
  .text.APP_ZCL_OnOffLight_2_cbEndpointCallback
-                0x0000000000082b6d       0x91 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082b75       0x91 ../../DimmableLight/Build/app_zcl_light_task.o
  .text.APP_ZCL_OnOffLight_1_cbEndpointCallback
-                0x0000000000082bfe       0x91 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082c06       0x91 ../../DimmableLight/Build/app_zcl_light_task.o
  .text.APP_ZCL_vInitialise
-                0x0000000000082c8f       0xf3 ../../DimmableLight/Build/app_zcl_light_task.o
-                0x0000000000082c8f                APP_ZCL_vInitialise
+                0x0000000000082c97       0xf3 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082c97                APP_ZCL_vInitialise
  .text.APP_ZCL_vSetIdentifyTime
-                0x0000000000082d82        0x9 ../../DimmableLight/Build/app_zcl_light_task.o
-                0x0000000000082d82                APP_ZCL_vSetIdentifyTime
+                0x0000000000082d8a        0x9 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082d8a                APP_ZCL_vSetIdentifyTime
  .text.APP_cbTimerZclTick
-                0x0000000000082d8b       0x95 ../../DimmableLight/Build/app_zcl_light_task.o
-                0x0000000000082d8b                APP_cbTimerZclTick
+                0x0000000000082d93       0x95 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082d93                APP_cbTimerZclTick
  .text.APP_ZCL_vEventHandler
-                0x0000000000082e20       0x22 ../../DimmableLight/Build/app_zcl_light_task.o
-                0x0000000000082e20                APP_ZCL_vEventHandler
+                0x0000000000082e28       0x22 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082e28                APP_ZCL_vEventHandler
  .text.vResetZCLRecords
-                0x0000000000082e42       0x40 ../../DimmableLight/Build/app_zcl_light_task.o
-                0x0000000000082e42                vResetZCLRecords
+                0x0000000000082e4a       0x40 ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082e4a                vResetZCLRecords
  .text.APP_ZCL_cbEndpointCallback
-                0x0000000000082e82      0x23e ../../DimmableLight/Build/app_zcl_light_task.o
+                0x0000000000082e8a      0x23e ../../DimmableLight/Build/app_zcl_light_task.o
  .text.APP_vManageTemperatureInit
-                0x00000000000830c0       0x1b ../../DimmableLight/Build/app_manage_temperature.o
-                0x00000000000830c0                APP_vManageTemperatureInit
+                0x00000000000830c8       0x1b ../../DimmableLight/Build/app_manage_temperature.o
+                0x00000000000830c8                APP_vManageTemperatureInit
  .text.APP_cbTimerRadioRecal
-                0x00000000000830db       0x25 ../../DimmableLight/Build/app_manage_temperature.o
-                0x00000000000830db                APP_cbTimerRadioRecal
+                0x00000000000830e3       0x25 ../../DimmableLight/Build/app_manage_temperature.o
+                0x00000000000830e3                APP_cbTimerRadioRecal
  .text.APP_vManageTemperatureTick
-                0x0000000000083100       0xbe ../../DimmableLight/Build/app_manage_temperature.o
-                0x0000000000083100                APP_vManageTemperatureTick
+                0x0000000000083108       0xbe ../../DimmableLight/Build/app_manage_temperature.o
+                0x0000000000083108                APP_vManageTemperatureTick
  .text.eRestoreReports
-                0x00000000000831be       0x1b ../../DimmableLight/Build/app_reporting.o
-                0x00000000000831be                eRestoreReports
+                0x00000000000831c6       0x1b ../../DimmableLight/Build/app_reporting.o
+                0x00000000000831c6                eRestoreReports
  .text.vMakeSupportedAttributesReportable
-                0x00000000000831d9       0x41 ../../DimmableLight/Build/app_reporting.o
-                0x00000000000831d9                vMakeSupportedAttributesReportable
+                0x00000000000831e1       0x41 ../../DimmableLight/Build/app_reporting.o
+                0x00000000000831e1                vMakeSupportedAttributesReportable
  .text.vLoadDefaultConfigForReportable
-                0x000000000008321a       0x48 ../../DimmableLight/Build/app_reporting.o
-                0x000000000008321a                vLoadDefaultConfigForReportable
+                0x0000000000083222       0x48 ../../DimmableLight/Build/app_reporting.o
+                0x0000000000083222                vLoadDefaultConfigForReportable
  .text.vSaveReportableRecord
-                0x0000000000083262       0x44 ../../DimmableLight/Build/app_reporting.o
-                0x0000000000083262                vSaveReportableRecord
+                0x000000000008326a       0x44 ../../DimmableLight/Build/app_reporting.o
+                0x000000000008326a                vSaveReportableRecord
  .text.APP_cbTimerReporting
-                0x00000000000832a6       0x6b ../../DimmableLight/Build/app_reporting.o
-                0x00000000000832a6                APP_cbTimerReporting
+                0x00000000000832ae       0x6b ../../DimmableLight/Build/app_reporting.o
+                0x00000000000832ae                APP_cbTimerReporting
  .text.vManagePowerOnCountLoadRecord
-                0x0000000000083311       0x1a ../../DimmableLight/Build/app_power_on_counter.o
-                0x0000000000083311                vManagePowerOnCountLoadRecord
+                0x0000000000083319       0x1a ../../DimmableLight/Build/app_power_on_counter.o
+                0x0000000000083319                vManagePowerOnCountLoadRecord
  .text.vManagePowerOnCountInit
-                0x000000000008332b       0x47 ../../DimmableLight/Build/app_power_on_counter.o
-                0x000000000008332b                vManagePowerOnCountInit
+                0x0000000000083333       0x47 ../../DimmableLight/Build/app_power_on_counter.o
+                0x0000000000083333                vManagePowerOnCountInit
  .text.APP_cbTimerPowerCount
-                0x0000000000083372       0x68 ../../DimmableLight/Build/app_power_on_counter.o
-                0x0000000000083372                APP_cbTimerPowerCount
+                0x000000000008337a       0x68 ../../DimmableLight/Build/app_power_on_counter.o
+                0x000000000008337a                APP_cbTimerPowerCount
  .text.bAllowInterPanEp
-                0x00000000000833da       0x1f ../../DimmableLight/Build/App_DimmableLight.o
+                0x00000000000833e2       0x1f ../../DimmableLight/Build/App_DimmableLight.o
  .text.eApp_ZLO_RegisterEndpoint
-                0x00000000000833f9       0x23 ../../DimmableLight/Build/App_DimmableLight.o
-                0x00000000000833f9                eApp_ZLO_RegisterEndpoint
+                0x0000000000083401       0x23 ../../DimmableLight/Build/App_DimmableLight.o
+                0x0000000000083401                eApp_ZLO_RegisterEndpoint
  .text.eApp_ZLO_OnOff_RegisterEndpoint_1
-                0x000000000008341c        0xd ../../DimmableLight/Build/App_DimmableLight.o
-                0x000000000008341c                eApp_ZLO_OnOff_RegisterEndpoint_1
+                0x0000000000083424        0xd ../../DimmableLight/Build/App_DimmableLight.o
+                0x0000000000083424                eApp_ZLO_OnOff_RegisterEndpoint_1
  .text.eApp_ZLO_OnOff_RegisterEndpoint_2
-                0x0000000000083429        0xd ../../DimmableLight/Build/App_DimmableLight.o
-                0x0000000000083429                eApp_ZLO_OnOff_RegisterEndpoint_2
+                0x0000000000083431        0xd ../../DimmableLight/Build/App_DimmableLight.o
+                0x0000000000083431                eApp_ZLO_OnOff_RegisterEndpoint_2
  .text.eApp_ZLO_OnOff_RegisterEndpoint_3
-                0x0000000000083436        0xd ../../DimmableLight/Build/App_DimmableLight.o
-                0x0000000000083436                eApp_ZLO_OnOff_RegisterEndpoint_3
+                0x000000000008343e        0xd ../../DimmableLight/Build/App_DimmableLight.o
+                0x000000000008343e                eApp_ZLO_OnOff_RegisterEndpoint_3
  .text.vAPP_ZCL_DeviceSpecific_Init
-                0x0000000000083443       0x90 ../../DimmableLight/Build/App_DimmableLight.o
-                0x0000000000083443                vAPP_ZCL_DeviceSpecific_Init
+                0x000000000008344b       0x90 ../../DimmableLight/Build/App_DimmableLight.o
+                0x000000000008344b                vAPP_ZCL_DeviceSpecific_Init
  .text.app_u8GetDeviceEndpoint
-                0x00000000000834d3        0x5 ../../DimmableLight/Build/App_DimmableLight.o
-                0x00000000000834d3                app_u8GetDeviceEndpoint
+                0x00000000000834db        0x5 ../../DimmableLight/Build/App_DimmableLight.o
+                0x00000000000834db                app_u8GetDeviceEndpoint
  .text.vApp_ZCL_ResetDeviceStructure
-                0x00000000000834d8       0x10 ../../DimmableLight/Build/App_DimmableLight.o
-                0x00000000000834d8                vApp_ZCL_ResetDeviceStructure
+                0x00000000000834e0       0x10 ../../DimmableLight/Build/App_DimmableLight.o
+                0x00000000000834e0                vApp_ZCL_ResetDeviceStructure
  .text.APP_vHandleIdentify
-                0x00000000000834e8       0x52 ../../DimmableLight/Build/App_DimmableLight.o
-                0x00000000000834e8                APP_vHandleIdentify
+                0x00000000000834f0       0x52 ../../DimmableLight/Build/App_DimmableLight.o
+                0x00000000000834f0                APP_vHandleIdentify
  .text.vIdEffectTick
-                0x000000000008353a      0x16c ../../DimmableLight/Build/App_DimmableLight.o
-                0x000000000008353a                vIdEffectTick
+                0x0000000000083542      0x16c ../../DimmableLight/Build/App_DimmableLight.o
+                0x0000000000083542                vIdEffectTick
  .text.vStartEffect
-                0x00000000000836a6      0x109 ../../DimmableLight/Build/App_DimmableLight.o
-                0x00000000000836a6                vStartEffect
+                0x00000000000836ae      0x109 ../../DimmableLight/Build/App_DimmableLight.o
+                0x00000000000836ae                vStartEffect
  .text.vSetBulbState
-                0x00000000000837af        0x5 ../../DimmableLight/Build/App_DimmableLight.o
-                0x00000000000837af                vSetBulbState
+                0x00000000000837b7        0x5 ../../DimmableLight/Build/App_DimmableLight.o
+                0x00000000000837b7                vSetBulbState
  .text.vISR_Timer3
-                0x00000000000837b4        0x6 ../../DimmableLight/Build/App_DimmableLight.o
-                0x00000000000837b4                vISR_Timer3
+                0x00000000000837bc        0x6 ../../DimmableLight/Build/App_DimmableLight.o
+                0x00000000000837bc                vISR_Timer3
  .text.vISR_Timer4
-                0x00000000000837ba        0x6 ../../DimmableLight/Build/App_DimmableLight.o
-                0x00000000000837ba                vISR_Timer4
+                0x00000000000837c2        0x6 ../../DimmableLight/Build/App_DimmableLight.o
+                0x00000000000837c2                vISR_Timer4
  .text.DriverBulb_vInit
-                0x00000000000837c0       0x1f ../../DimmableLight/Build/DriverBulb_MB3.o
-                0x00000000000837c0                DriverBulb_vInit
+                0x00000000000837c8       0x1f ../../DimmableLight/Build/DriverBulb_MB3.o
+                0x00000000000837c8                DriverBulb_vInit
  .text.DriverBulb_bSetNo
-                0x00000000000837df        0x9 ../../DimmableLight/Build/DriverBulb_MB3.o
-                0x00000000000837df                DriverBulb_bSetNo
+                0x00000000000837e7        0x9 ../../DimmableLight/Build/DriverBulb_MB3.o
+                0x00000000000837e7                DriverBulb_bSetNo
  .text.DriverBulb_vSetOnOff
-                0x00000000000837e8       0x3e ../../DimmableLight/Build/DriverBulb_MB3.o
-                0x00000000000837e8                DriverBulb_vSetOnOff
+                0x00000000000837f0       0x3e ../../DimmableLight/Build/DriverBulb_MB3.o
+                0x00000000000837f0                DriverBulb_vSetOnOff
  .text.DriverBulb_bOn
-                0x0000000000083826       0x12 ../../DimmableLight/Build/DriverBulb_MB3.o
-                0x0000000000083826                DriverBulb_bOn
+                0x000000000008382e       0x12 ../../DimmableLight/Build/DriverBulb_MB3.o
+                0x000000000008382e                DriverBulb_bOn
  .text.DriverBulb_bReady
-                0x0000000000083838        0x5 ../../DimmableLight/Build/DriverBulb_MB3.o
-                0x0000000000083838                DriverBulb_bReady
+                0x0000000000083840        0x5 ../../DimmableLight/Build/DriverBulb_MB3.o
+                0x0000000000083840                DriverBulb_bReady
  .text.DriverBulb_bFailed
-                0x000000000008383d        0x5 ../../DimmableLight/Build/DriverBulb_MB3.o
-                0x000000000008383d                DriverBulb_bFailed
+                0x0000000000083845        0x5 ../../DimmableLight/Build/DriverBulb_MB3.o
+                0x0000000000083845                DriverBulb_bFailed
  .text.DriverBulb_vTick
-                0x0000000000083842        0x3 ../../DimmableLight/Build/DriverBulb_MB3.o
-                0x0000000000083842                DriverBulb_vTick
+                0x000000000008384a        0x3 ../../DimmableLight/Build/DriverBulb_MB3.o
+                0x000000000008384a                DriverBulb_vTick
  .text.APP_vLedInitialise
-                0x0000000000083845        0xa ../../DimmableLight/Build/app_led_interface.o
-                0x0000000000083845                APP_vLedInitialise
+                0x000000000008384d        0xa ../../DimmableLight/Build/app_led_interface.o
+                0x000000000008384d                APP_vLedInitialise
  .text.APP_vSetLed
-                0x000000000008384f       0x13 ../../DimmableLight/Build/app_led_interface.o
-                0x000000000008384f                APP_vSetLed
+                0x0000000000083857       0x13 ../../DimmableLight/Build/app_led_interface.o
+                0x0000000000083857                APP_vSetLed
  .text.vBULB_Init
-                0x0000000000083862        0x2 ../../DimmableLight/Build/DriverBulb_Shim.o
-                0x0000000000083862                vBULB_Init
+                0x000000000008386a        0x2 ../../DimmableLight/Build/DriverBulb_Shim.o
+                0x000000000008386a                vBULB_Init
  .text.vBULB_SetOnOff
-                0x0000000000083864        0x2 ../../DimmableLight/Build/DriverBulb_Shim.o
-                0x0000000000083864                vBULB_SetOnOff
+                0x000000000008386c        0x2 ../../DimmableLight/Build/DriverBulb_Shim.o
+                0x000000000008386c                vBULB_SetOnOff
  .text.APP_bButtonInitialise
-                0x0000000000083866       0x5d ../../DimmableLight/Build/app_buttons.o
-                0x0000000000083866                APP_bButtonInitialise
+                0x000000000008386e       0x52 ../../DimmableLight/Build/app_buttons.o
+                0x000000000008386e                APP_bButtonInitialise
  .text.vISR_SystemController
-                0x00000000000838c3       0x22 ../../DimmableLight/Build/app_buttons.o
-                0x00000000000838c3                vISR_SystemController
+                0x00000000000838c0       0x22 ../../DimmableLight/Build/app_buttons.o
+                0x00000000000838c0                vISR_SystemController
  .text.APP_cbTimerButtonScan
-                0x00000000000838e5       0xc2 ../../DimmableLight/Build/app_buttons.o
-                0x00000000000838e5                APP_cbTimerButtonScan
+                0x00000000000838e2       0xc2 ../../DimmableLight/Build/app_buttons.o
+                0x00000000000838e2                APP_cbTimerButtonScan
  .text.ZQ_vQueueCreate
-                0x00000000000839a7       0x12 ../../DimmableLight/Build/ZQueue.o
-                0x00000000000839a7                ZQ_vQueueCreate
+                0x00000000000839a4       0x12 ../../DimmableLight/Build/ZQueue.o
+                0x00000000000839a4                ZQ_vQueueCreate
  .text.ZQ_bQueueSend
-                0x00000000000839b9       0x7f ../../DimmableLight/Build/ZQueue.o
-                0x00000000000839b9                ZQ_bQueueSend
+                0x00000000000839b6       0x7f ../../DimmableLight/Build/ZQueue.o
+                0x00000000000839b6                ZQ_bQueueSend
  .text.ZQ_bQueueReceive
-                0x0000000000083a38       0x75 ../../DimmableLight/Build/ZQueue.o
-                0x0000000000083a38                ZQ_bQueueReceive
+                0x0000000000083a35       0x75 ../../DimmableLight/Build/ZQueue.o
+                0x0000000000083a35                ZQ_bQueueReceive
  .text.ZQ_u32QueueGetQueueSize
-                0x0000000000083aad        0x6 ../../DimmableLight/Build/ZQueue.o
-                0x0000000000083aad                ZQ_u32QueueGetQueueSize
+                0x0000000000083aaa        0x6 ../../DimmableLight/Build/ZQueue.o
+                0x0000000000083aaa                ZQ_u32QueueGetQueueSize
  .text.ZQ_u32QueueGetQueueMessageWaiting
-                0x0000000000083ab3        0x6 ../../DimmableLight/Build/ZQueue.o
-                0x0000000000083ab3                ZQ_u32QueueGetQueueMessageWaiting
+                0x0000000000083ab0        0x6 ../../DimmableLight/Build/ZQueue.o
+                0x0000000000083ab0                ZQ_u32QueueGetQueueMessageWaiting
  .text.ZTIMER_eInit
-                0x0000000000083ab9       0x57 ../../DimmableLight/Build/ZTimer.o
-                0x0000000000083ab9                ZTIMER_eInit
+                0x0000000000083ab6       0x57 ../../DimmableLight/Build/ZTimer.o
+                0x0000000000083ab6                ZTIMER_eInit
  .text.ISR_vTickTimer
-                0x0000000000083b10       0x2d ../../DimmableLight/Build/ZTimer.o
-                0x0000000000083b10                ISR_vTickTimer
+                0x0000000000083b0d       0x2d ../../DimmableLight/Build/ZTimer.o
+                0x0000000000083b0d                ISR_vTickTimer
  .text.ZTIMER_vTask
-                0x0000000000083b3d       0x86 ../../DimmableLight/Build/ZTimer.o
-                0x0000000000083b3d                ZTIMER_vTask
+                0x0000000000083b3a       0x86 ../../DimmableLight/Build/ZTimer.o
+                0x0000000000083b3a                ZTIMER_vTask
  .text.ZTIMER_eOpen
-                0x0000000000083bc3       0x42 ../../DimmableLight/Build/ZTimer.o
-                0x0000000000083bc3                ZTIMER_eOpen
+                0x0000000000083bc0       0x42 ../../DimmableLight/Build/ZTimer.o
+                0x0000000000083bc0                ZTIMER_eOpen
  .text.ZTIMER_eStart
-                0x0000000000083c05       0x5e ../../DimmableLight/Build/ZTimer.o
-                0x0000000000083c05                ZTIMER_eStart
+                0x0000000000083c02       0x5e ../../DimmableLight/Build/ZTimer.o
+                0x0000000000083c02                ZTIMER_eStart
  .text.ZTIMER_eStop
-                0x0000000000083c63       0x52 ../../DimmableLight/Build/ZTimer.o
-                0x0000000000083c63                ZTIMER_eStop
+                0x0000000000083c60       0x52 ../../DimmableLight/Build/ZTimer.o
+                0x0000000000083c60                ZTIMER_eStop
  .text.eCLD_BasicCreateBasic
-                0x0000000000083cb5       0x9c ../../DimmableLight/Build/Basic.o
-                0x0000000000083cb5                eCLD_BasicCreateBasic
+                0x0000000000083cb2       0x9c ../../DimmableLight/Build/Basic.o
+                0x0000000000083cb2                eCLD_BasicCreateBasic
  .text.eCLD_BasicCommandResetToFactoryDefaultsReceive
-                0x0000000000083d51        0x9 ../../DimmableLight/Build/BasicClientCommands.o
-                0x0000000000083d51                eCLD_BasicCommandResetToFactoryDefaultsReceive
+                0x0000000000083d4e        0x9 ../../DimmableLight/Build/BasicClientCommands.o
+                0x0000000000083d4e                eCLD_BasicCommandResetToFactoryDefaultsReceive
  .text.eCLD_BasicCommandHandler
-                0x0000000000083d5a       0x67 ../../DimmableLight/Build/BasicCommandHandler.o
-                0x0000000000083d5a                eCLD_BasicCommandHandler
+                0x0000000000083d57       0x67 ../../DimmableLight/Build/BasicCommandHandler.o
+                0x0000000000083d57                eCLD_BasicCommandHandler
  .text.eCLD_GroupsCreateGroups
-                0x0000000000083dc1      0x11d ../../DimmableLight/Build/Groups.o
-                0x0000000000083dc1                eCLD_GroupsCreateGroups
+                0x0000000000083dbe      0x11d ../../DimmableLight/Build/Groups.o
+                0x0000000000083dbe                eCLD_GroupsCreateGroups
  .text.eCLD_GroupsSetIdentifying
-                0x0000000000083ede       0x25 ../../DimmableLight/Build/Groups.o
-                0x0000000000083ede                eCLD_GroupsSetIdentifying
+                0x0000000000083edb       0x25 ../../DimmableLight/Build/Groups.o
+                0x0000000000083edb                eCLD_GroupsSetIdentifying
  .text.eCLD_GroupsCheckGroupExists
-                0x0000000000083f03       0x76 ../../DimmableLight/Build/Groups.o
-                0x0000000000083f03                eCLD_GroupsCheckGroupExists
+                0x0000000000083f00       0x76 ../../DimmableLight/Build/Groups.o
+                0x0000000000083f00                eCLD_GroupsCheckGroupExists
  .text.eCLD_GroupsHandleAddGroupRequest
-                0x0000000000083f79       0xc7 ../../DimmableLight/Build/GroupsCommandHandler.o
- *fill*         0x0000000000084040        0x0 00
+                0x0000000000083f76       0xc7 ../../DimmableLight/Build/GroupsCommandHandler.o
+ *fill*         0x000000000008403d        0x3 00
  .text.eCLD_GroupsCommandHandler
                 0x0000000000084040      0x2ac ../../DimmableLight/Build/GroupsCommandHandler.o
                 0x0000000000084040                eCLD_GroupsCommandHandler
@@ -13922,181 +13918,187 @@ LOAD d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
  .text.u8AHI_TimerFired
                 0x00000000000a8912       0x23 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Timer.o)
                 0x00000000000a8912                u8AHI_TimerFired
+ .text.vAHI_TimerFineGrainDIOControl
+                0x00000000000a8935        0x7 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Timer.o)
+                0x00000000000a8935                vAHI_TimerFineGrainDIOControl
  .text.vAHI_UartSetBaudDivisor
-                0x00000000000a8935       0x43 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
-                0x00000000000a8935                vAHI_UartSetBaudDivisor
+                0x00000000000a893c       0x43 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a893c                vAHI_UartSetBaudDivisor
  .text.vAHI_UartSetClockDivisor
-                0x00000000000a8978       0x26 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
-                0x00000000000a8978                vAHI_UartSetClockDivisor
+                0x00000000000a897f       0x26 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a897f                vAHI_UartSetClockDivisor
  .text.vAHI_UartReset
-                0x00000000000a899e       0x3c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
-                0x00000000000a899e                vAHI_UartReset
+                0x00000000000a89a5       0x3c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a89a5                vAHI_UartReset
  .text.vAHI_UartConfigureFIFOs.part.5
-                0x00000000000a89da       0x6c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a89e1       0x6c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
  .text.vAHI_UartEnable
-                0x00000000000a8a46       0x7e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
-                0x00000000000a8a46                vAHI_UartEnable
+                0x00000000000a8a4d       0x7e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a8a4d                vAHI_UartEnable
  .text.u8AHI_UartReadLineStatus
-                0x00000000000a8ac4       0x23 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
-                0x00000000000a8ac4                u8AHI_UartReadLineStatus
+                0x00000000000a8acb       0x23 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a8acb                u8AHI_UartReadLineStatus
  .text.vAHI_UartWriteData
-                0x00000000000a8ae7       0x1c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
-                0x00000000000a8ae7                vAHI_UartWriteData
+                0x00000000000a8aee       0x1c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a8aee                vAHI_UartWriteData
  .text.u8AHI_UartReadData
-                0x00000000000a8b03       0x23 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
-                0x00000000000a8b03                u8AHI_UartReadData
+                0x00000000000a8b0a       0x23 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a8b0a                u8AHI_UartReadData
+ .text.vAHI_UartSetRTSCTS
+                0x00000000000a8b2d       0x1f ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a8b2d                vAHI_UartSetRTSCTS
  .text.u8AHI_UartReadRxFifoLevel
-                0x00000000000a8b26       0x24 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
-                0x00000000000a8b26                u8AHI_UartReadRxFifoLevel
+                0x00000000000a8b4c       0x24 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000000a8b4c                u8AHI_UartReadRxFifoLevel
  .text.vAHI_WakeTimerEnable.part.0
-                0x00000000000a8b4a       0x55 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                0x00000000000a8b70       0x55 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
  .text.vAHI_WakeTimerStop.part.3
-                0x00000000000a8b9f       0x20 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                0x00000000000a8bc5       0x20 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
  .text.vAHI_WakeTimerEnable
-                0x00000000000a8bbf        0x9 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
-                0x00000000000a8bbf                vAHI_WakeTimerEnable
+                0x00000000000a8be5        0x9 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                0x00000000000a8be5                vAHI_WakeTimerEnable
  .text.vAHI_WakeTimerStart
-                0x00000000000a8bc8       0x53 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
-                0x00000000000a8bc8                vAHI_WakeTimerStart
+                0x00000000000a8bee       0x53 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                0x00000000000a8bee                vAHI_WakeTimerStart
  .text.vAHI_WakeTimerStop
-                0x00000000000a8c1b        0x9 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
-                0x00000000000a8c1b                vAHI_WakeTimerStop
+                0x00000000000a8c41        0x9 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                0x00000000000a8c41                vAHI_WakeTimerStop
  .text.u8AHI_WakeTimerFiredStatus
-                0x00000000000a8c24       0x14 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
-                0x00000000000a8c24                u8AHI_WakeTimerFiredStatus
+                0x00000000000a8c4a       0x14 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                0x00000000000a8c4a                u8AHI_WakeTimerFiredStatus
  .text.u32AHI_WakeTimerCalibrate
-                0x00000000000a8c38       0x2c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
-                0x00000000000a8c38                u32AHI_WakeTimerCalibrate
- *fill*         0x00000000000a8c64        0x0 00
+                0x00000000000a8c5e       0x2c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                0x00000000000a8c5e                u32AHI_WakeTimerCalibrate
+ *fill*         0x00000000000a8c8a        0x2 00
  .text.bAHI_FlashInit
-                0x00000000000a8c64      0x17c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Flash.o)
-                0x00000000000a8c64                bAHI_FlashInit
+                0x00000000000a8c8c      0x17c ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Flash.o)
+                0x00000000000a8c8c                bAHI_FlashInit
  .text.vConfigureSpi
-                0x00000000000a8de0       0x26 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Flash.o)
-                0x00000000000a8de0                vConfigureSpi
+                0x00000000000a8e08       0x26 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Flash.o)
+                0x00000000000a8e08                vConfigureSpi
  .text.bAHI_FullFlashRead
-                0x00000000000a8e06       0x4f ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Flash.o)
-                0x00000000000a8e06                bAHI_FullFlashRead
+                0x00000000000a8e2e       0x4f ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Flash.o)
+                0x00000000000a8e2e                bAHI_FullFlashRead
  .text.bAHI_FlashGetMutex
-                0x00000000000a8e55       0x26 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_FlashPoll.o)
-                0x00000000000a8e55                bAHI_FlashGetMutex
+                0x00000000000a8e7d       0x26 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_FlashPoll.o)
+                0x00000000000a8e7d                bAHI_FlashGetMutex
  .text.bAHI_FlashReleaseMutex
-                0x00000000000a8e7b       0x1d ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_FlashPoll.o)
-                0x00000000000a8e7b                bAHI_FlashReleaseMutex
+                0x00000000000a8ea3       0x1d ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_FlashPoll.o)
+                0x00000000000a8ea3                bAHI_FlashReleaseMutex
  .text.u16AHI_InitialiseEEP
-                0x00000000000a8e98       0x42 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
-                0x00000000000a8e98                u16AHI_InitialiseEEP
+                0x00000000000a8ec0       0x42 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+                0x00000000000a8ec0                u16AHI_InitialiseEEP
  .text.vAHI_WriteDataIntoEEPROMregister
-                0x00000000000a8eda       0x30 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
-                0x00000000000a8eda                vAHI_WriteDataIntoEEPROMregister
+                0x00000000000a8f02       0x30 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+                0x00000000000a8f02                vAHI_WriteDataIntoEEPROMregister
  .text.vAHI_ReadDataFromEEPROMregister
-                0x00000000000a8f0a       0x2d ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
-                0x00000000000a8f0a                vAHI_ReadDataFromEEPROMregister
+                0x00000000000a8f32       0x2d ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+                0x00000000000a8f32                vAHI_ReadDataFromEEPROMregister
  .text.bAHI_InitialiseEEPROM
-                0x00000000000a8f37       0x48 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
-                0x00000000000a8f37                bAHI_InitialiseEEPROM
+                0x00000000000a8f5f       0x48 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+                0x00000000000a8f5f                bAHI_InitialiseEEPROM
  .text.bAHI_WriteEEPROMfixSegmentData
-                0x00000000000a8f7f       0x5e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
-                0x00000000000a8f7f                bAHI_WriteEEPROMfixSegmentData
+                0x00000000000a8fa7       0x5e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+                0x00000000000a8fa7                bAHI_WriteEEPROMfixSegmentData
  .text.iAHI_EraseEEPROMsegment
-                0x00000000000a8fdd       0x41 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
-                0x00000000000a8fdd                iAHI_EraseEEPROMsegment
+                0x00000000000a9005       0x41 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+                0x00000000000a9005                iAHI_EraseEEPROMsegment
  .text.iAHI_WriteDataIntoEEPROMsegment
-                0x00000000000a901e       0x53 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
-                0x00000000000a901e                iAHI_WriteDataIntoEEPROMsegment
+                0x00000000000a9046       0x53 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+                0x00000000000a9046                iAHI_WriteDataIntoEEPROMsegment
  .text.vAHI_TickTimerWrite
-                0x00000000000a9071        0x9 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
-                0x00000000000a9071                vAHI_TickTimerWrite
+                0x00000000000a9099        0x9 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
+                0x00000000000a9099                vAHI_TickTimerWrite
  .text.vAHI_TickTimerIntPendClr
-                0x00000000000a907a       0x15 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
-                0x00000000000a907a                vAHI_TickTimerIntPendClr
+                0x00000000000a90a2       0x15 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
+                0x00000000000a90a2                vAHI_TickTimerIntPendClr
  .text.vAHI_TickTimerConfigure
-                0x00000000000a908f       0x1b ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
-                0x00000000000a908f                vAHI_TickTimerConfigure
+                0x00000000000a90b7       0x1b ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
+                0x00000000000a90b7                vAHI_TickTimerConfigure
  .text.vAHI_TickTimerIntEnable
-                0x00000000000a90aa       0x21 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
-                0x00000000000a90aa                vAHI_TickTimerIntEnable
+                0x00000000000a90d2       0x21 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
+                0x00000000000a90d2                vAHI_TickTimerIntEnable
  .text.vAHI_TickTimerInterval
-                0x00000000000a90cb       0x1e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
-                0x00000000000a90cb                vAHI_TickTimerInterval
- .text          0x00000000000a90e9       0x27 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
-                0x00000000000a90e9                vAHI_InterruptSetPriority
-                0x00000000000a9107                vAHI_InterruptSetActivePriorityLevel
+                0x00000000000a90f3       0x1e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
+                0x00000000000a90f3                vAHI_TickTimerInterval
+ .text          0x00000000000a9111       0x27 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+                0x00000000000a9111                vAHI_InterruptSetPriority
+                0x00000000000a912f                vAHI_InterruptSetActivePriorityLevel
  .text.vAHI_SpiConfigure
-                0x00000000000a9110       0x85 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
-                0x00000000000a9110                vAHI_SpiConfigure
+                0x00000000000a9138       0x85 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
+                0x00000000000a9138                vAHI_SpiConfigure
  .text.vAHI_SpiReadConfiguration
-                0x00000000000a9195       0x2e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
-                0x00000000000a9195                vAHI_SpiReadConfiguration
+                0x00000000000a91bd       0x2e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
+                0x00000000000a91bd                vAHI_SpiReadConfiguration
  .text.vAHI_SpiRestoreConfiguration
-                0x00000000000a91c3       0x3e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
-                0x00000000000a91c3                vAHI_SpiRestoreConfiguration
+                0x00000000000a91eb       0x3e ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
+                0x00000000000a91eb                vAHI_SpiRestoreConfiguration
  .text.vAHI_SpiSelect
-                0x00000000000a9201        0x7 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
-                0x00000000000a9201                vAHI_SpiSelect
+                0x00000000000a9229        0x7 ../../../../sdk/JN-SW-4170/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
+                0x00000000000a9229                vAHI_SpiSelect
  .text.vMicroIntEnableOnly
-                0x00000000000a9208       0x2c ../../../../sdk/JN-SW-4170/Components/Library\libMicroSpecific_JN516x.a(MicroInt_ba.o)
-                0x00000000000a9208                vMicroIntEnableOnly
+                0x00000000000a9230       0x2c ../../../../sdk/JN-SW-4170/Components/Library\libMicroSpecific_JN516x.a(MicroInt_ba.o)
+                0x00000000000a9230                vMicroIntEnableOnly
  .text.vMicroIntRestoreState
-                0x00000000000a9234        0xc ../../../../sdk/JN-SW-4170/Components/Library\libMicroSpecific_JN516x.a(MicroInt_ba.o)
-                0x00000000000a9234                vMicroIntRestoreState
+                0x00000000000a925c        0xc ../../../../sdk/JN-SW-4170/Components/Library\libMicroSpecific_JN516x.a(MicroInt_ba.o)
+                0x00000000000a925c                vMicroIntRestoreState
  .text.vMicroSyscall
-                0x00000000000a9240       0x17 ../../../../sdk/JN-SW-4170/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
-                0x00000000000a9240                vMicroSyscall
+                0x00000000000a9268       0x17 ../../../../sdk/JN-SW-4170/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+                0x00000000000a9268                vMicroSyscall
  .text.pvHeap_DefAlloc
-                0x00000000000a9257       0x6b ../../../../sdk/JN-SW-4170/Components/Library\libBoot_JN516x.a(Heap.o)
+                0x00000000000a927f       0x6b ../../../../sdk/JN-SW-4170/Components/Library\libBoot_JN516x.a(Heap.o)
  .text.pvHeap_Alloc
-                0x00000000000a92c2        0xf ../../../../sdk/JN-SW-4170/Components/Library\libBoot_JN516x.a(Heap.o)
-                0x00000000000a92c2                pvHeap_Alloc
+                0x00000000000a92ea        0xf ../../../../sdk/JN-SW-4170/Components/Library\libBoot_JN516x.a(Heap.o)
+                0x00000000000a92ea                pvHeap_Alloc
  .text.ZPS_vTsvInit
-                0x00000000000a92d1        0x9 ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
-                0x00000000000a92d1                ZPS_vTsvInit
+                0x00000000000a92f9        0x9 ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
+                0x00000000000a92f9                ZPS_vTsvInit
  .text.ZPS_eTsvOpen
-                0x00000000000a92da       0x15 ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
-                0x00000000000a92da                ZPS_eTsvOpen
+                0x00000000000a9302       0x15 ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
+                0x00000000000a9302                ZPS_eTsvOpen
  .text.ZPS_eTsvClose
-                0x00000000000a92ef        0x4 ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
-                0x00000000000a92ef                ZPS_eTsvClose
+                0x00000000000a9317        0x4 ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
+                0x00000000000a9317                ZPS_eTsvClose
  .text.ZPS_eTsvStart
-                0x00000000000a92f3       0x35 ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
-                0x00000000000a92f3                ZPS_eTsvStart
+                0x00000000000a931b       0x35 ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
+                0x00000000000a931b                ZPS_eTsvStart
  .text.ZPS_eTsvStop
-                0x00000000000a9328       0x2f ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
-                0x00000000000a9328                ZPS_eTsvStop
+                0x00000000000a9350       0x2f ../../../../sdk/JN-SW-4170/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
+                0x00000000000a9350                ZPS_eTsvStop
  .text.AESSW_vMMOBlockUpdate
-                0x00000000000a9357       0x37 ../../../../sdk/JN-SW-4170/Components/Library\libAES_SW_JN516x.a(aes_sw_mmo.o)
-                0x00000000000a9357                AESSW_vMMOBlockUpdate
+                0x00000000000a937f       0x37 ../../../../sdk/JN-SW-4170/Components/Library\libAES_SW_JN516x.a(aes_sw_mmo.o)
+                0x00000000000a937f                AESSW_vMMOBlockUpdate
  .text.AESSW_vMMOFinalUpdate
-                0x00000000000a938e       0xc2 ../../../../sdk/JN-SW-4170/Components/Library\libAES_SW_JN516x.a(aes_sw_mmo.o)
-                0x00000000000a938e                AESSW_vMMOFinalUpdate
+                0x00000000000a93b6       0xc2 ../../../../sdk/JN-SW-4170/Components/Library\libAES_SW_JN516x.a(aes_sw_mmo.o)
+                0x00000000000a93b6                AESSW_vMMOFinalUpdate
  .text.AESSW_vHMAC_MMO
-                0x00000000000a9450       0x9c ../../../../sdk/JN-SW-4170/Components/Library\libAES_SW_JN516x.a(aes_sw_hmac_mmo.o)
-                0x00000000000a9450                AESSW_vHMAC_MMO
- .text          0x00000000000a94ec       0x25 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
-                0x00000000000a94ec                memcmp
- .text          0x00000000000a9511       0x19 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
- .text          0x00000000000a952a       0x12 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
-                0x00000000000a952a                memset
- .text          0x00000000000a953c       0x12 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-strlen.o)
-                0x00000000000a953c                strlen
- .text          0x00000000000a954e       0x2b d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-strncpy.o)
-                0x00000000000a954e                strncpy
- *fill*         0x00000000000a9579        0x3 00
- .text          0x00000000000a957c      0x204 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
-                0x00000000000a957c                __udivsi3
- .text          0x00000000000a9780       0x30 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
-                0x00000000000a9780                __divsi3
- .text          0x00000000000a97b0      0x1b0 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
-                0x00000000000a97b0                __umodsi3
- .text          0x00000000000a9960       0x24 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
-                0x00000000000a9960                __modsi3
- .text          0x00000000000a9984      0x3bd d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_divdi3.o)
-                0x00000000000a9984                __divdi3
- .text          0x00000000000a9d41      0x350 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
-                0x00000000000a9d41                __udivdi3
-                0x00000000000aa091                _flash_end = ABSOLUTE (.)
+                0x00000000000a9478       0x9c ../../../../sdk/JN-SW-4170/Components/Library\libAES_SW_JN516x.a(aes_sw_hmac_mmo.o)
+                0x00000000000a9478                AESSW_vHMAC_MMO
+ .text          0x00000000000a9514       0x25 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+                0x00000000000a9514                memcmp
+ .text          0x00000000000a9539       0x19 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .text          0x00000000000a9552       0x12 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+                0x00000000000a9552                memset
+ .text          0x00000000000a9564       0x12 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-strlen.o)
+                0x00000000000a9564                strlen
+ .text          0x00000000000a9576       0x2b d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-strncpy.o)
+                0x00000000000a9576                strncpy
+ *fill*         0x00000000000a95a1        0x3 00
+ .text          0x00000000000a95a4      0x204 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+                0x00000000000a95a4                __udivsi3
+ .text          0x00000000000a97a8       0x30 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+                0x00000000000a97a8                __divsi3
+ .text          0x00000000000a97d8      0x1b0 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+                0x00000000000a97d8                __umodsi3
+ .text          0x00000000000a9988       0x24 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+                0x00000000000a9988                __modsi3
+ .text          0x00000000000a99ac      0x3bd d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_divdi3.o)
+                0x00000000000a99ac                __divdi3
+ .text          0x00000000000a9d69      0x350 d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+                0x00000000000a9d69                __udivdi3
+                0x00000000000aa0b9                _flash_end = ABSOLUTE (.)
 
-.rela.dyn       0x00000000000aa094        0x0
+.rela.dyn       0x00000000000aa0bc        0x0
  .rela.text     0x0000000000000000        0x0 ../../DimmableLight/Build/irq_JN516x.o
  .rela.text.APP_vInitResources
                 0x0000000000000000        0x0 ../../DimmableLight/Build/irq_JN516x.o
@@ -14876,7 +14878,7 @@ LOAD d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
                 0x0000000000000000        0x0 ../../DimmableLight/Build/irq_JN516x.o
                 0x000000000400004c                . = ORIGIN (ram)
 
-.data           0x000000000400004c      0x724 load address 0x00000000000aa094
+.data           0x000000000400004c      0x724 load address 0x00000000000aa0bc
                 0x000000000400004c                _ram_data_start = ABSOLUTE (.)
  *(.data*)
  .data.s_asapduZCLInstances
@@ -15127,7 +15129,7 @@ LOAD d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
                 0x0000000004000770                . = ALIGN (0x4)
                 0x0000000004000770                _ram_data_end = ABSOLUTE (.)
 
-.bss            0x0000000004000770     0x5a44 load address 0x00000000000aa7b8
+.bss            0x0000000004000770     0x5a44 load address 0x00000000000aa7e0
                 0x0000000004000770                _bss_start = ABSOLUTE (.)
  *(.bss*)
  .bss.asTimers  0x0000000004000770       0x70 ../../DimmableLight/Build/app_main.o
@@ -16023,23 +16025,23 @@ LOAD d:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
                 0x00000000040061b4                . = ALIGN (0x4)
                 0x00000000040061b4                _bss_end = ABSOLUTE (.)
 
-.heap           0x00000000040061b4      0x7d0 load address 0x00000000000b01fc
+.heap           0x00000000040061b4      0x7d0 load address 0x00000000000b0224
                 0x00000000040061b4                _heap_start = ABSOLUTE (.)
                 0x0000000004006984                . = (. + __minimum_heap_size)
  *fill*         0x00000000040061b4      0x7d0 00
 
-.stack          0x0000000004006c78     0x1388 load address 0x00000000000b0cc0
+.stack          0x0000000004006c78     0x1388 load address 0x00000000000b0ce8
                 0x0000000004006c78                _heap_end = ABSOLUTE (.)
                 0x0000000004006c78                _stack_low_water_mark = ABSOLUTE (.)
                 0x0000000004008000                . = (. + __stack_size)
  *fill*         0x0000000004006c78     0x1388 00
 
-.test           0x00000000000aa7b8        0x1
-                0x00000000000aa7b8        0x1 BYTE 0xff
-                0x00000000000aa094                _flash_data_start = LOADADDR (.data)
+.test           0x00000000000aa7e0        0x1
+                0x00000000000aa7e0        0x1 BYTE 0xff
+                0x00000000000aa0bc                _flash_data_start = LOADADDR (.data)
                 0x0000000000000724                _ram_data_len = (((_ram_data_end - _ram_data_start) + 0x3) & 0xfffffffffffffffc)
                 0x0000000000005a44                _bss_len = (((_bss_end - _bss_start) + 0x3) & 0xfffffffffffffffc)
-                0x000000000002a7b8                _image_len = ((((_flash_end - _flash_start) + _ram_data_len) + 0x3) & 0xfffffffffffffffc)
+                0x000000000002a7e0                _image_len = ((((_flash_end - _flash_start) + _ram_data_len) + 0x3) & 0xfffffffffffffffc)
                 0x0000000004008000                _ram_top = (ABSOLUTE (ORIGIN (ram)) + 0x7fb4)
                 0x0000000004008000                ram_top = (ABSOLUTE (ORIGIN (ram)) + 0x7fb4)
                 0x0000000001001580                _app_ram_start = 0x1001580

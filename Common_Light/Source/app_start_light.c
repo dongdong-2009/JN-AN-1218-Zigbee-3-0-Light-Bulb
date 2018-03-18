@@ -154,6 +154,11 @@ PUBLIC void vAppMain(void)
     bAHI_SetClockRate(3); /* Move CPU to 32 MHz  vAHI_OptimiseWaitStates automatically called */
 #endif
 
+    /*
+     * Don't use RTS/CTS pins on UART0 as they are used for buttons
+     * */
+    vAHI_UartSetRTSCTS(E_AHI_UART_0, FALSE);
+
     /* Initialise the debug diagnostics module to use UART0 at 115K Baud;
      * Do not use UART 1 if LEDs are used, as it shares DIO with the LEDS
      */

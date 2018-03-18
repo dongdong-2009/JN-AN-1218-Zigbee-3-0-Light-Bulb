@@ -36,6 +36,7 @@
 /***        Include files                                                 ***/
 /****************************************************************************/
 #include <jendefs.h>
+#include <PeripheralRegs.h>
 #include "dbg.h"
 #include "AppHardwareApi.h"
 #include "app_events.h"
@@ -136,6 +137,7 @@
  ****************************************************************************/
 PUBLIC bool_t APP_bButtonInitialise(void)
 {
+	vAHI_TimerFineGrainDIOControl(REG_SYS_TIM_IO_T1PDIS_MASK );
     /* Set DIO lines to inputs with buttons connected */
     vAHI_DioSetDirection(APP_BUTTONS_DIO_MASK, 0);
 
@@ -154,10 +156,10 @@ PUBLIC bool_t APP_bButtonInitialise(void)
 
     uint32 u32Buttons = u32AHI_DioReadInput() & APP_BUTTONS_DIO_MASK;
     DBG_vPrintf(TRUE, "\nAPP Button: vale %x", u32Buttons);
-    if (u32Buttons != APP_BUTTONS_DIO_MASK)
-    {
-        return TRUE;
-    }
+//    if (u32Buttons != APP_BUTTONS_DIO_MASK)
+//    {
+//        return TRUE;
+//    }
     return FALSE;
 }
 

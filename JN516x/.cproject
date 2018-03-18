@@ -76,7 +76,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ZCL/Clusters/GreenPower/Include}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1213379634" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="MONO_WITH_LEVEL=1"/>
+									<listOptionValue builtIn="false" value="MONO_WITH_LEVEL=0"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.502014202" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol" valueType="undefDefinedSymbols">
 									<listOptionValue builtIn="false" value="APP_NTAG_ICODE"/>
