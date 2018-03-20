@@ -49,6 +49,9 @@
     #include "App_ColorTemperatureLight.h"
 #endif
 
+#ifdef OnOffCurtain
+    #include "App_OnOffCurtain.h"
+#endif
 /****************************************************************************/
 /***        Macro Definitions                                             ***/
 /****************************************************************************/

@@ -2,9 +2,9 @@
  *
  * MODULE:             JN-AN-1218
  *
- * COMPONENT:          app_reporting.h
+ * COMPONENT:          App_DimmableLight.h
  *
- * DESCRIPTION:        Light Bulb application reporting functionality
+ * DESCRIPTION:        ZLO Demo: Dimmable Light Interface
  *
  ****************************************************************************
  *
@@ -32,42 +32,54 @@
  *
  ***************************************************************************/
 
-#ifndef APP_REPORTING_H_
-#define APP_REPORTING_H_
-#include <jendefs.h>
-#include "zcl.h"
-#include "PDM.h"
+#ifndef APP_DIMMABLE_LIGHT_H
+#define APP_DIMMABLE_LIGHT_H
 
-/****************************************************************************/
-/***        Macro Definitions                                             ***/
-/****************************************************************************/
+#include "dimmable_light.h"
+#include "commission_endpoint.h"
+#include "on_off_light.h"
+#include "app_reporting.h"
 
 /****************************************************************************/
 /***        Type Definitions                                              ***/
 /****************************************************************************/
-typedef struct {
-    uint16 u16ClusterID;
-    tsZCL_AttributeReportingConfigurationRecord sAttributeReportingConfigurationRecord;
-}tsReports;
-/****************************************************************************/
-/***        Exported Functions                                            ***/
-/****************************************************************************/
-PUBLIC PDM_teStatus eRestoreReports(void);
-PUBLIC void vMakeSupportedAttributesReportable(void);
-PUBLIC void vLoadDefaultConfigForReportable(void);
-PUBLIC void vSaveReportableRecord( uint16 u16ClusterID, tsZCL_AttributeReportingConfigurationRecord* psAttributeReportingConfigurationRecord);
-PUBLIC void APP_cbTimerReporting(void *pvParam);
-PUBLIC void APP_ImmediatelyReportingOnOff(uint8 endpoint);
-
-
 
 /****************************************************************************/
 /***        External Variables                                            ***/
 /****************************************************************************/
 
+extern tsZLO_DimmableLightDevice sLight;
+extern tsCLD_ZllDeviceTable sDeviceTable;
+extern tsReports asDefaultReports[];
+extern tsZLO_OnOffLightDevice sOnOffLight[3];
+/****************************************************************************/
+/***        Exported Functions                                            ***/
 /****************************************************************************/
 
+PUBLIC teZCL_Status eApp_ZLO_RegisterEndpoint(tfpZCL_ZCLCallBackFunction fptr);
+PUBLIC teZCL_Status eApp_ZLO_OnOff_RegisterEndpoint_1(tfpZCL_ZCLCallBackFunction fptr);
+PUBLIC teZCL_Status eApp_ZLO_OnOff_RegisterEndpoint_2(tfpZCL_ZCLCallBackFunction fptr);
+PUBLIC teZCL_Status eApp_ZLO_OnOff_RegisterEndpoint_3(tfpZCL_ZCLCallBackFunction fptr);
+PUBLIC void vAPP_ZCL_DeviceSpecific_Init(void);
+#ifdef MONO_WITH_LEVEL
+PUBLIC void vSetBulbState(bool bOn, uint8 u8Level);
+#elif defined MONO_ON_OFF
+PUBLIC void vSetBulbState(bool bOn);
+#endif
+
+PUBLIC void vStartEffect(uint8 u8Effect);
+PUBLIC void vIdEffectTick( uint8 u8Endpoint);
+PUBLIC void APP_vHandleIdentify(uint16 u16Time);
+PUBLIC void vCreateInterpolationPoints(void);
+PUBLIC uint8 app_u8GetDeviceEndpoint( void);
+PUBLIC void vApp_ZCL_ResetDeviceStructure(void);
+
+PUBLIC void vApp_StartopenCurtain(void);
+PUBLIC void vApp_StopMoveCurtain(void);
+PUBLIC void vApp_StartCloseCurtain(void);
+PUBLIC void APP_cbTimerCurtain(void);
 /****************************************************************************/
+/***        END OF FILE                                                   ***/
 /****************************************************************************/
 
-#endif //APP_REPORTING_H_
+#endif /* APP_DIMMABLE_LIGHT_H */

@@ -39,7 +39,7 @@
 #include "zps_gen.h"
 #include "AppHardwareApi.h"
 #include "app_reporting.h"
-#include "App_DimmableLight.h"
+#include "App_OnOffCurtain.h"
 #include "app_zcl_light_task.h"
 #include "app_common.h"
 #include "dbg.h"
@@ -50,6 +50,10 @@
 
 #include "zlo_device_id.h"
 
+#include "Z1_KG_MB3.h"
+#include "DriverBulb_Shim.h"
+#include "app_main.h"
+#include "app_reporting.h"
 
 #ifdef DEBUG_LIGHT_TASK
 #define TRACE_LIGHT_TASK  TRUE
@@ -502,14 +506,6 @@ PUBLIC void vSetBulbState(bool bOn, uint8 u8Level)
 PUBLIC void vSetBulbState(bool bOn)
 #endif
 {
-//    if (bOn)
-//    {
-//        vLI_Start(u8Level, 0,0,0,0);
-//    }
-//    else
-//    {
-//        vLI_Stop();
-//    }
     vBULB_SetOnOff(bOn);
 }
 
@@ -541,6 +537,92 @@ PUBLIC void vISR_SystemController(void)
 }
 #endif
 
+static uint8_t CurtainCommand=0;
+
+PUBLIC void vApp_StartOpenCurtain(void)
+{
+	 DriverBulb_bSetNo(BULB_0_VAL);
+	 vBULB_SetOnOff(FALSE);
+	 DriverBulb_bSetNo(BULB_2_VAL);
+	 vBULB_SetOnOff(FALSE);
+
+	 CurtainCommand = 1;
+	 //delay 30s
+	 ZTIMER_eStart(u8TimerCurtain, ZTIMER_TIME_MSEC(100));
+}
+
+PUBLIC void vApp_StopMoveCurtain(void)
+{
+	 DriverBulb_bSetNo(BULB_0_VAL);
+	 vBULB_SetOnOff(FALSE);
+	 DriverBulb_bSetNo(BULB_2_VAL);
+	 vBULB_SetOnOff(FALSE);
+
+	 CurtainCommand = 3;
+	 ZTIMER_eStart(u8TimerCurtain, ZTIMER_TIME_MSEC(100));
+}
+
+PUBLIC void vApp_StartCloseCurtain(void)
+{
+	 DriverBulb_bSetNo(BULB_0_VAL);
+	 vBULB_SetOnOff(FALSE);
+	 DriverBulb_bSetNo(BULB_2_VAL);
+	 vBULB_SetOnOff(FALSE);
+
+	 CurtainCommand = 5;
+	 //delay 30s
+	 ZTIMER_eStart(u8TimerCurtain, ZTIMER_TIME_MSEC(100));
+}
+
+PUBLIC void APP_cbTimerCurtain(void){
+	ZTIMER_eStop(u8TimerCurtain);
+
+	switch(CurtainCommand){
+	case 1://开启
+		CurtainCommand = 2;
+		DriverBulb_bSetNo(BULB_0_VAL);
+		vBULB_SetOnOff(TRUE);
+		DriverBulb_bSetNo(BULB_2_VAL);
+		vBULB_SetOnOff(FALSE);
+		ZTIMER_eStart(u8TimerCurtain, ZTIMER_TIME_MSEC(30000));
+		break;
+	case 2://开启结束
+		CurtainCommand = 0;
+		DriverBulb_bSetNo(BULB_0_VAL);
+		vBULB_SetOnOff(FALSE);
+		DriverBulb_bSetNo(BULB_2_VAL);
+		vBULB_SetOnOff(FALSE);
+		APP_ImmediatelyReportingOnOff(DIMMABLELIGHT_LIGHT_ENDPOINT);
+		break;
+	case 3://停止
+		APP_ImmediatelyReportingOnOff(DIMMABLELIGHT_LIGHT_1_ENDPOINT);
+		break;
+
+	case 5://关闭
+		CurtainCommand = 6;
+		DriverBulb_bSetNo(BULB_0_VAL);
+		vBULB_SetOnOff(FALSE);
+		DriverBulb_bSetNo(BULB_2_VAL);
+		vBULB_SetOnOff(TRUE);
+		ZTIMER_eStart(u8TimerCurtain, ZTIMER_TIME_MSEC(30000));
+		break;
+	case 6://关闭结束
+		CurtainCommand = 0;
+		DriverBulb_bSetNo(BULB_0_VAL);
+		vBULB_SetOnOff(FALSE);
+		DriverBulb_bSetNo(BULB_2_VAL);
+		vBULB_SetOnOff(FALSE);
+		APP_ImmediatelyReportingOnOff(DIMMABLELIGHT_LIGHT_2_ENDPOINT);
+		break;
+	default:
+		DriverBulb_bSetNo(BULB_0_VAL);
+		vBULB_SetOnOff(FALSE);
+		DriverBulb_bSetNo(BULB_2_VAL);
+		vBULB_SetOnOff(FALSE);
+		break;
+	}
+
+}
 /****************************************************************************/
 /***        END OF FILE                                                   ***/
 /****************************************************************************/

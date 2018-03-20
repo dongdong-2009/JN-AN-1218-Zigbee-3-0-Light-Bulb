@@ -156,10 +156,10 @@ PUBLIC bool_t APP_bButtonInitialise(void)
 
     uint32 u32Buttons = u32AHI_DioReadInput() & APP_BUTTONS_DIO_MASK;
     DBG_vPrintf(TRUE, "\nAPP Button: vale %x", u32Buttons);
-//    if (u32Buttons != APP_BUTTONS_DIO_MASK)
-//    {
-//        return TRUE;
-//    }
+    if (u32Buttons != APP_BUTTONS_DIO_MASK)
+    {
+        return TRUE;
+    }
     return FALSE;
 }
 

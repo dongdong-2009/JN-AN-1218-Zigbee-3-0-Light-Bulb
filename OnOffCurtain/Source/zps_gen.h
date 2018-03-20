@@ -6,7 +6,7 @@
  *
  * COMPONENT:      zps_gen.h
  *
- * DATE:           Fri Mar 16 08:18:01 2018
+ * DATE:           Mon Mar 19 20:55:51 2018
  *
  * AUTHOR:         NXP Zigbee Protocol Stack Configuration Tool
  *
@@ -45,7 +45,7 @@
 /****************************************************************************/
 
 #define ZPS_NWK_OPT_ALL
-#define ZPS_NODE_DIMMABLELIGHT
+#define ZPS_NODE_ONOFFCURTAIN
 
 /* Profile 'ZDP' */
 #define ZDP_PROFILE_ID    (0x0000)
@@ -172,10 +172,19 @@
 /* Endpoints */
 #define COLORTEMPERATURELIGHT_ZDO_ENDPOINT    (0)
 #define COLORTEMPERATURELIGHT_LIGHT_ENDPOINT    (1)
+
+/* Node 'OnOffCurtain' */
+
+/* Endpoints */
+#define ONOFFCURTAIN_ZDO_ENDPOINT    (0)
+#define ONOFFCURTAIN_LIGHT_ENDPOINT    (1)
+#define ONOFFCURTAIN_LIGHT_1_ENDPOINT    (2)
+#define ONOFFCURTAIN_LIGHT_2_ENDPOINT    (3)
+#define ONOFFCURTAIN_LIGHT_3_ENDPOINT    (4)
 /* Table Sizes */
 #define ZPS_NEIGHBOUR_TABLE_SIZE      (26)
 #define ZPS_ADDRESS_MAP_TABLE_SIZE    (10)
-#define ZPS_ROUTING_TABLE_SIZE        (70)
+#define ZPS_ROUTING_TABLE_SIZE        (60)
 #define ZPS_MAC_ADDRESS_TABLE_SIZE    (36)
 #define ZPS_BINDING_TABLE_SIZE        (16)
 #define ZPS_GROUP_TABLE_SIZE          (16)

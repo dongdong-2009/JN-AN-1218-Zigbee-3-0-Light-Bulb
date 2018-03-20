@@ -103,5 +103,10 @@
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/ExtendedColorLight</locationURI>
 		</link>
+		<link>
+			<name>OnOffCurtain</name>
+			<type>2</type>
+			<location>D:/NXP/bstudio_nxp/workspace/JN-AN-1218-Zigbee-3-0-Light-Bulb/OnOffCurtain</location>
+		</link>
 	</linkedResources>
 </projectDescription>

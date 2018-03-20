@@ -79,6 +79,7 @@
 									<listOptionValue builtIn="false" value="MONO_WITH_LEVEL=0"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.502014202" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol" valueType="undefDefinedSymbols">
+									<listOptionValue builtIn="false" value="MONO_WITH_LEVEL"/>
 									<listOptionValue builtIn="false" value="APP_NTAG_ICODE"/>
 								</option>
 								<inputType id="com.beyondsemi.base.ba.elf.c.compiler.input.1449865702" superClass="com.beyondsemi.base.ba.elf.c.compiler.input"/>
@@ -386,6 +387,62 @@
 			<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
 			<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 		</cconfiguration>
+		<cconfiguration id="0.876190861.1781733102.485851044.1693036255">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.876190861.1781733102.485851044.1693036255" moduleId="org.eclipse.cdt.core.settings" name="OnOffCurtain">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="JN-AN-1133-ZigBee-Pro-Lightswitch" buildProperties="" description="开关窗帘" id="0.876190861.1781733102.485851044.1693036255" name="OnOffCurtain" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+					<folderInfo id="0.876190861.1781733102.485851044.1693036255." name="/" resourcePath="">
+						<toolChain id="com.beyondsemi.toolchain.gnu.ba.elf.base.178720407" name="BA ELF GNU toolchain" superClass="com.beyondsemi.toolchain.gnu.ba.elf.base">
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.beyondsemi.target.gnu.platform.ba.elf.586928673" superClass="com.beyondsemi.target.gnu.platform.ba.elf"/>
+							<builder arguments="LIGHT=OnOffCurtain TRACE=1 JENNIC_CHIP_FAMILY=JN516x JENNIC_CHIP=JN5169 DR=DR1175 OTA=0 OTA_ENCRYPTED=0 APP_NTAG_ICODE=0 APP_NTAG_AES=0" autoBuildTarget="all" buildPath="${ProjDirPath}/../Common_Light/Build/" cleanBuildTarget="clean" command="make" enableAutoBuild="false" enableCleanBuild="true" enabledIncrementalBuild="true" id="com.beyondsemi.builder.cdt.gnu.706204219" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="com.beyondsemi.builder.cdt.gnu"/>
+							<tool id="com.beyondsemi.tool.gnu.ba.elf.compiler.c.base.1099892304" name="BA ELF GNU C compiler" superClass="com.beyondsemi.tool.gnu.ba.elf.compiler.c.base">
+								<option id="gnu.c.compiler.option.include.paths.913453764" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ZCL/Clusters/General/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ZCL/Clusters/GreenPower/Include}&quot;"/>
+								</option>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1474858819" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MONO_WITH_LEVEL=0"/>
+								</option>
+								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.831211873" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol" valueType="undefDefinedSymbols">
+									<listOptionValue builtIn="false" value="MONO_WITH_LEVEL"/>
+									<listOptionValue builtIn="false" value="APP_NTAG_ICODE"/>
+								</option>
+								<inputType id="com.beyondsemi.base.ba.elf.c.compiler.input.1609060728" superClass="com.beyondsemi.base.ba.elf.c.compiler.input"/>
+								<inputType id="com.beyondsemi.assembler.macro.input.1657586089" superClass="com.beyondsemi.assembler.macro.input"/>
+							</tool>
+							<tool id="com.beyondsemi.tool.gnu.ba.elf.compiler.cpp.base.1498039291" name="BA ELF GNU C++ compiler" superClass="com.beyondsemi.tool.gnu.ba.elf.compiler.cpp.base"/>
+							<tool id="com.beyondsemi.tool.gnu.ba.elf.linker.c.base.1734027764" name="BA ELF GNU C linker" superClass="com.beyondsemi.tool.gnu.ba.elf.linker.c.base">
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1610316661" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.beyondsemi.tool.gnu.ba.elf.linker.cpp.base.1928961165" name="BA ELF GNU C++ linker" superClass="com.beyondsemi.tool.gnu.ba.elf.linker.cpp.base"/>
+							<tool id="com.beyondsemi.tool.gnu.ba.elf.assembler.base.1531468045" name="BA ELF GNU assembler" superClass="com.beyondsemi.tool.gnu.ba.elf.assembler.base">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.99168295" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+								<inputType id="com.beyondsemi.assembler.input.1062578874" superClass="com.beyondsemi.assembler.input"/>
+							</tool>
+							<tool id="com.beyondsemi.tool.gnu.ba.elf.archiver.base.1276160825" name="BA ELF GNU archiver" superClass="com.beyondsemi.tool.gnu.ba.elf.archiver.base"/>
+							<tool id="com.beyondsemi.tool.gnu.ba.elf.size.base.410249315" name="BA ELF GNU size" superClass="com.beyondsemi.tool.gnu.ba.elf.size.base"/>
+							<tool id="com.beyondsemi.tool.gnu.ba.elf.objcopy.base.984621636" name="BA ELF GNU objcopy" superClass="com.beyondsemi.tool.gnu.ba.elf.objcopy.base"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+			<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="ZSL-Test-App-Switch.null.301096766" name="ZSL-Test-App-Switch"/>
@@ -440,23 +497,24 @@
 			<resource resourceType="PROJECT" workspacePath="/ZBProv1.1"/>
 		</configuration>
 		<configuration configurationName="DimmableLight_GP(DR1175)"/>
-		<configuration configurationName="Light_DimmableLight_1">
-			<resource resourceType="PROJECT" workspacePath="/ZBProv1.1"/>
-		</configuration>
 		<configuration configurationName="Light_ExtendedColorLight">
 			<resource resourceType="PROJECT" workspacePath="/ZSL-Test-App"/>
 		</configuration>
-		<configuration configurationName="Light_ColorLight">
-			<resource resourceType="PROJECT" workspacePath="/ZSL-Test-App"/>
+		<configuration configurationName="Light_DimmableLight_1">
+			<resource resourceType="PROJECT" workspacePath="/ZBProv1.1"/>
 		</configuration>
 		<configuration configurationName="Light_DimmableLight_2">
 			<resource resourceType="PROJECT" workspacePath="/ZBProv1.1"/>
 		</configuration>
-		<configuration configurationName="ColorTemperatureLight"/>
+		<configuration configurationName="Light_ColorLight">
+			<resource resourceType="PROJECT" workspacePath="/ZSL-Test-App"/>
+		</configuration>
 		<configuration configurationName="DimmableLight_GP_Proxy">
 			<resource resourceType="PROJECT" workspacePath="/JN-AN-1218-Zigbee-3-0-Light-Bulb"/>
 		</configuration>
+		<configuration configurationName="ColorTemperatureLight"/>
 		<configuration configurationName="ColorTemperatureLight_GP"/>
+		<configuration configurationName="OnOffCurtain"/>
 		<configuration configurationName="ExtendedColorLight, GpCombo, JN5169, DR1175"/>
 		<configuration configurationName="ExtendedColorLight_1"/>
 		<configuration configurationName="Light_ExtendedColorLight_1"/>
@@ -468,10 +526,10 @@
 		<configuration configurationName="Controller_NonColorController">
 			<resource resourceType="PROJECT" workspacePath="/ZSL-Test-App"/>
 		</configuration>
-		<configuration configurationName="Controller_NonColorSceneController">
+		<configuration configurationName="Light_DimmableLight_SSL2108A">
 			<resource resourceType="PROJECT" workspacePath="/ZSL-Test-App"/>
 		</configuration>
-		<configuration configurationName="Light_DimmableLight_SSL2108A">
+		<configuration configurationName="Controller_NonColorSceneController">
 			<resource resourceType="PROJECT" workspacePath="/ZSL-Test-App"/>
 		</configuration>
 	</storageModule>

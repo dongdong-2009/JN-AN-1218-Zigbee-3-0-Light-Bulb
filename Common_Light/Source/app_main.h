@@ -70,6 +70,9 @@ extern PUBLIC uint8 u8GPTimerTick;
 extern PUBLIC uint8 u8TimerNtag;
 #endif
 extern PUBLIC uint8 u8TimerReporting;
+#ifdef OnOffCurtain
+PUBLIC uint8 u8TimerCurtain;
+#endif
 
 extern PUBLIC tszQueue zps_msgMlmeDcfmInd;
 extern PUBLIC tszQueue zps_msgMcpsDcfmInd;

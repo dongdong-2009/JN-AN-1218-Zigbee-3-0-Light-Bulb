@@ -6,7 +6,7 @@
  *
  * COMPONENT:      zps_gen.c
  *
- * DATE:           Fri Mar 16 08:18:01 2018
+ * DATE:           Mon Mar 19 20:55:51 2018
  *
  * AUTHOR:         Jennic Zigbee Protocol Stack Configuration Tool
  *
@@ -535,7 +535,7 @@ PRIVATE ZPS_tsAplApsKeyDescriptorTable s_keyPairTable = { s_keyPairTableStorage,
 
 PRIVATE ZPS_tsAplAib s_sAplAib = {
     0,
-    0x0000000000000000ULL,
+    0x1234567887654321ULL,
     0x07fff800UL,
     FALSE,
     FALSE,
@@ -624,14 +624,14 @@ PRIVATE const uint16 s_au16Endpoint2OutputClusterList[4] = { 0x0000, 0x0004, 0x0
 PRIVATE uint8 s_au8Endpoint2OutputClusterDiscFlags[1] = { 0x00 };
 
 PRIVATE const uint16 s_au16Endpoint3InputClusterList[5] = { 0x0000, 0x0004, 0x0003, 0x0006, 0xffff, };
-PRIVATE const PDUM_thAPdu s_ahEndpoint3InputClusterAPdus[5] = { apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, };
+PRIVATE const PDUM_thAPdu s_ahEndpoint3InputClusterAPdus[5] = { NULL, NULL, NULL, NULL, NULL, };
 PRIVATE uint8 s_au8Endpoint3InputClusterDiscFlags[1] = { 0x0f };
 
 PRIVATE const uint16 s_au16Endpoint3OutputClusterList[4] = { 0x0000, 0x0004, 0x0003, 0x0006, };
 PRIVATE uint8 s_au8Endpoint3OutputClusterDiscFlags[1] = { 0x00 };
 
 PRIVATE const uint16 s_au16Endpoint4InputClusterList[5] = { 0x0000, 0x0004, 0x0003, 0x0006, 0xffff, };
-PRIVATE const PDUM_thAPdu s_ahEndpoint4InputClusterAPdus[5] = { apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, };
+PRIVATE const PDUM_thAPdu s_ahEndpoint4InputClusterAPdus[5] = { NULL, NULL, NULL, NULL, NULL, };
 PRIVATE uint8 s_au8Endpoint4InputClusterDiscFlags[1] = { 0x0f };
 
 PRIVATE const uint16 s_au16Endpoint4OutputClusterList[4] = { 0x0000, 0x0004, 0x0003, 0x0006, };
@@ -661,7 +661,7 @@ PRIVATE zps_tsAplAfSimpleDescCont s_asSimpleDescConts[5] = {
     {
         {
             0x0104,
-            257,
+            20311,
             1,
             1,
             9,
@@ -769,8 +769,8 @@ PRIVATE zps_tsApsmeCmdContainer s_sApsmeCmdContainer_1 = { &s_sApsmeCmdContainer
 PRIVATE uint8                   s_sNwkContext[1536] __attribute__ ((aligned (4)));
 PRIVATE ZPS_tsNwkDiscNtEntry    s_asNwkNtDisc[16];
 PRIVATE ZPS_tsNwkActvNtEntry    s_asNwkNtActv[26];
-PRIVATE ZPS_tsNwkRtDiscEntry    s_asNwkRtDisc[2];
-PRIVATE ZPS_tsNwkRtEntry        s_asNwkRt[70];
+PRIVATE ZPS_tsNwkRtDiscEntry    s_asNwkRtDisc[1];
+PRIVATE ZPS_tsNwkRtEntry        s_asNwkRt[60];
 PRIVATE ZPS_tsNwkBtr            s_asNwkBtt[25];
 PRIVATE ZPS_tsNwkRctEntry       s_asNwkRct[1];
 PRIVATE ZPS_tsNwkSecMaterialSet s_asNwkSecMatSet[2];
@@ -815,11 +815,11 @@ PRIVATE const uint16 u16ChildTableSize = 5;
 
 PRIVATE const ZPS_tsNwkNibTblSize     s_sNwkTblSize = {
     26,
-    70,
+    60,
     1,
     10,
     16,
-    2,
+    1,
     25,
     2,
     sizeof(s_sNibInitialValues),

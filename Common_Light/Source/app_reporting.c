@@ -350,6 +350,23 @@ PUBLIC void APP_cbTimerReporting(void *pvParam)
     	}
     }
 }
+
+PUBLIC void APP_ImmediatelyReportingOnOff(uint8 endpoint)
+{
+    teZCL_Status zcl_status;
+    tsZCL_Address sAddress;
+    PDUM_thAPduInstance    hAPduInst;
+    uint8 i;
+
+	//reporting
+	hAPduInst =  PDUM_hAPduAllocateAPduInstance ( apduZCL );
+	if ( PDUM_INVALID_HANDLE != hAPduInst ){
+		sAddress.eAddressMode = E_ZCL_AM_SHORT_NO_ACK;
+		sAddress.uAddress.u16DestinationAddress = 0;//coordinator
+		zcl_status = eZCL_ReportAttribute(&sAddress, 6, 0, endpoint, 1, hAPduInst);
+		DBG_vPrintf(TRACE_REPORT, "REPORT: Zcl status %d\n", zcl_status);
+	}
+}
 /****************************************************************************/
 /***        END OF FILE                                                   ***/
 /****************************************************************************/

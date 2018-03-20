@@ -517,28 +517,45 @@ PUBLIC void APP_taskLight(void)
             {
 
         	case APP_E_BUTTONS_BULB_0:
+			#if (defined DimmableLight)
         		DriverBulb_bSetNo(BULB_0_VAL);
         		sLight.sOnOffServerCluster.bOnOff = DriverBulb_bOn() ? DriverBulb_bFailed() : DriverBulb_bReady();
         		DriverBulb_vSetOnOff(sLight.sOnOffServerCluster.bOnOff);
-        		ZTIMER_eStart(u8TimerReporting, 5000);
+			#elif (defined OnOffCurtain)
+        		DBG_vPrintf(TRACE_LIGHT_NODE, "APP ZCL: Start open\r\n");
+				vApp_StartOpenCurtain();
+			#endif
+
+        		ZTIMER_eStart(u8TimerReporting, 1000);
         		break;
         	case APP_E_BUTTONS_BULB_1:
-        		DriverBulb_bSetNo(BULB_1_VAL);
-        		sOnOffLight[0].sOnOffServerCluster.bOnOff = DriverBulb_bOn() ? DriverBulb_bFailed() : DriverBulb_bReady();
-        		DriverBulb_vSetOnOff(sOnOffLight[0].sOnOffServerCluster.bOnOff);
-        		ZTIMER_eStart(u8TimerReporting, 5000);
+				#if (defined DimmableLight)
+					DriverBulb_bSetNo(BULB_1_VAL);
+					sOnOffLight[0].sOnOffServerCluster.bOnOff = DriverBulb_bOn() ? DriverBulb_bFailed() : DriverBulb_bReady();
+					DriverBulb_vSetOnOff(sOnOffLight[0].sOnOffServerCluster.bOnOff);
+        		#elif (defined OnOffCurtain)
+					DBG_vPrintf(TRACE_LIGHT_NODE, "APP ZCL: Stop move\r\n");
+					vApp_StopMoveCurtain();
+				#endif
+        		ZTIMER_eStart(u8TimerReporting, 1000);
         		break;
         	case APP_E_BUTTONS_BULB_2:
+				#if (defined DimmableLight)
         		DriverBulb_bSetNo(BULB_2_VAL);
-        		sOnOffLight[1].sOnOffServerCluster.bOnOff = DriverBulb_bOn() ? DriverBulb_bFailed() : DriverBulb_bReady();
-        		DriverBulb_vSetOnOff(sOnOffLight[1].sOnOffServerCluster.bOnOff);
-        		ZTIMER_eStart(u8TimerReporting, 5000);
+					sOnOffLight[1].sOnOffServerCluster.bOnOff = DriverBulb_bOn() ? DriverBulb_bFailed() : DriverBulb_bReady();
+					DriverBulb_vSetOnOff(sOnOffLight[1].sOnOffServerCluster.bOnOff);
+        		#elif (defined OnOffCurtain)
+					DBG_vPrintf(TRACE_LIGHT_NODE, "APP ZCL: Start close\r\n");
+					vApp_StartCloseCurtain();
+				#endif
+
+        		ZTIMER_eStart(u8TimerReporting, 1000);
         		break;
         	case APP_E_BUTTONS_BULB_3:
 				DriverBulb_bSetNo(BULB_3_VAL);
 				sOnOffLight[2].sOnOffServerCluster.bOnOff = DriverBulb_bOn() ? DriverBulb_bFailed() : DriverBulb_bReady();
 				DriverBulb_vSetOnOff(sOnOffLight[2].sOnOffServerCluster.bOnOff);
-				ZTIMER_eStart(u8TimerReporting, 5000);
+				ZTIMER_eStart(u8TimerReporting, 1000);
 				break;
 #if (!defined OM15045) && (!defined OM15053)
             case APP_E_BUTTONS_BUTTON_1:

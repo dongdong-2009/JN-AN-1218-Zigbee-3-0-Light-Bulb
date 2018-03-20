@@ -166,7 +166,16 @@ ifeq ($(TARGET),ExtendedColorLight)
  endif
 endif
 
-
+#OTA Parameters for on off curtain (add by zhuang)
+ifeq ($(TARGET),OnOffCurtain)
+ ifeq ($(OTA_ENCRYPTED),0)
+  OTA_DEVICE_ID = 0x0101
+  OTA_STRING = $(OTA_HW)$(OTA_HW_VARIANT)-$(JENNIC_CHIP)00000000000000
+ else
+  OTA_DEVICE_ID = 0x1101
+  OTA_STRING = $(OTA_HW)$(OTA_HW_VARIANT)-$(JENNIC_CHIP)--ENCRYPTED000
+ endif
+endif
 ###############################################################################
 # Default DK4 development kit target hardware
 
@@ -439,6 +448,10 @@ endif
 ifeq ($(TARGET),DimmableLight)
 CFLAGS += -DDIMMABLELIGHT
 #CFLAGS += -DMONO_WITH_LEVEL
+CFLAGS += -DMONO_ON_OFF
+endif
+ifeq ($(TARGET),OnOffCurtain)
+CFLAGS += -DDIMMABLELIGHT
 CFLAGS += -DMONO_ON_OFF
 endif
 

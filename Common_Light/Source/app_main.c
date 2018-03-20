@@ -83,6 +83,10 @@
 #include "APP_Light_OnOffPlug.h"
 #endif
 
+#ifdef OnOffCurtain
+#include "App_OnOffCurtain.h"
+#endif
+
 #ifdef APP_NTAG_ICODE
 #include "app_ntag_icode.h"
 #endif
@@ -132,6 +136,9 @@ PUBLIC uint8 u8TimerRadioRecal;
 PUBLIC uint8 u8TimerTick;
 PUBLIC uint8 u8TimerPowerOn;
 PUBLIC uint8 u8TimerReporting;
+#ifdef OnOffCurtain
+PUBLIC uint8 u8TimerCurtain;
+#endif
 
 #define APP_NUM_STD_TMRS            4
 
@@ -295,6 +302,7 @@ PUBLIC void APP_vInitResources(void)
         ZTIMER_eOpen(&u8TimerZclMsTick, APP_cbTimerZclMsTick,       NULL, ZTIMER_FLAG_PREVENT_SLEEP);
     #endif
     ZTIMER_eOpen(&u8TimerReporting,          APP_cbTimerReporting,      NULL, ZTIMER_FLAG_PREVENT_SLEEP);
+    ZTIMER_eOpen(&u8TimerCurtain,            APP_cbTimerCurtain,        NULL, ZTIMER_FLAG_PREVENT_SLEEP);
 
     /* Create all the queues */
     ZQ_vQueueCreate(&APP_msgBdbEvents,        BDB_QUEUE_SIZE,         sizeof(BDB_tsZpsAfEvent),   (uint8*)asBdbEvent);

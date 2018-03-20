@@ -549,7 +549,12 @@ PRIVATE void APP_ZCL_cbEndpointCallback(tsZCL_CallBackEvent *psEvent)
 
                 switch(psCallBackMessage->u8CommandId)
                 {
-
+					case E_CLD_ONOFF_CMD_ON:
+					#if (defined OnOffCurtain)
+						DBG_vPrintf(TRACE_ZCL, "APP ZCL: Stop open\r\n");
+						vApp_StartOpenCurtain();
+					#endif
+                	break;
                     case E_CLD_ONOFF_CMD_OFF_EFFECT:
                         DBG_vPrintf(TRACE_ZCL, "\nOff with effect %d:%d", psCallBackMessage->uMessage.psOffWithEffectRequestPayload->u8EffectId,
                                                                       psCallBackMessage->uMessage.psOffWithEffectRequestPayload->u8EffectVariant);
@@ -810,7 +815,11 @@ PRIVATE void vUpdateBulbFromZCL(bool_t bResetInterpolation)
      * mono on off bulb
      */
     DBG_vPrintf(TRACE_PATH, "\nJP on_off only bulb");
-    vSetBulbState( sLight.sOnOffServerCluster.bOnOff);
+	#if (defined DimmableLight)
+		DriverBulb_bSetNo(BULB_0_VAL);
+		vSetBulbState( sLight.sOnOffServerCluster.bOnOff);
+	#endif
+
 #endif
     u8StateChangeTick = BULB_SAVE_DELAY_SEC;
 }
@@ -1096,10 +1105,15 @@ PRIVATE void APP_ZCL_OnOffLight_1_cbEndpointCallback(tsZCL_CallBackEvent *psEven
 
                 tsCLD_OnOffCallBackMessage *psCallBackMessage = (tsCLD_OnOffCallBackMessage*)psEvent->uMessage.sClusterCustomMessage.pvCustomData;
 
-                DBG_vPrintf(TRACE_ZCL, " CmdId=%d", psCallBackMessage->u8CommandId);
-
-                DriverBulb_bSetNo(BULB_1_VAL);
-                vBULB_SetOnOff(sOnOffLight[0].sOnOffServerCluster.bOnOff);
+                DBG_vPrintf(TRACE_ZCL, "APP ZCL: CmdId=%d\r\n", psCallBackMessage->u8CommandId);
+                DBG_vPrintf(TRACE_ZCL, "APP ZCL: onoff=%d\r\n", sOnOffLight[0].sOnOffServerCluster.bOnOff);
+				#if (defined DimmableLight)
+					DriverBulb_bSetNo(BULB_1_VAL);
+					vBULB_SetOnOff(psCallBackMessage->u8CommandId);
+				#elif (defined OnOffCurtain)
+					DBG_vPrintf(TRACE_ZCL, "APP ZCL: Stop Move\r\n");
+                	vApp_StopMoveCurtain();
+				#endif
                 switch(psCallBackMessage->u8CommandId)
                 {
 
@@ -1156,10 +1170,17 @@ PRIVATE void APP_ZCL_OnOffLight_2_cbEndpointCallback(tsZCL_CallBackEvent *psEven
 
                 tsCLD_OnOffCallBackMessage *psCallBackMessage = (tsCLD_OnOffCallBackMessage*)psEvent->uMessage.sClusterCustomMessage.pvCustomData;
 
-                DBG_vPrintf(TRACE_ZCL, " CmdId=%d", psCallBackMessage->u8CommandId);
+                DBG_vPrintf(TRACE_ZCL, "APP ZCL: CmdId=%d", psCallBackMessage->u8CommandId);
 
-                DriverBulb_bSetNo(BULB_2_VAL);
-                vBULB_SetOnOff(sOnOffLight[1].sOnOffServerCluster.bOnOff);
+                DBG_vPrintf(TRACE_ZCL, "APP ZCL: onoff=%d\r\n", sOnOffLight[0].sOnOffServerCluster.bOnOff);
+				#if (defined DimmableLight)
+					DriverBulb_bSetNo(BULB_2_VAL);
+					vBULB_SetOnOff(psCallBackMessage->u8CommandId);
+				#elif (defined OnOffCurtain)
+					DBG_vPrintf(TRACE_ZCL, "APP ZCL: Start Close\r\n");
+					vApp_StartCloseCurtain();
+				#endif
+
                 switch(psCallBackMessage->u8CommandId)
                 {
 
@@ -1214,10 +1235,12 @@ PRIVATE void APP_ZCL_OnOffLight_3_cbEndpointCallback(tsZCL_CallBackEvent *psEven
 
                 tsCLD_OnOffCallBackMessage *psCallBackMessage = (tsCLD_OnOffCallBackMessage*)psEvent->uMessage.sClusterCustomMessage.pvCustomData;
 
-                DBG_vPrintf(TRACE_ZCL, " CmdId=%d", psCallBackMessage->u8CommandId);
+                DBG_vPrintf(TRACE_ZCL, "APP ZCL: CmdId=%d", psCallBackMessage->u8CommandId);
 
+                DBG_vPrintf(TRACE_ZCL, "APP ZCL: onoff=%d\r\n", sOnOffLight[0].sOnOffServerCluster.bOnOff);
                 DriverBulb_bSetNo(BULB_3_VAL);
-                vBULB_SetOnOff(sOnOffLight[2].sOnOffServerCluster.bOnOff);
+                vBULB_SetOnOff(psCallBackMessage->u8CommandId);
+
                 switch(psCallBackMessage->u8CommandId)
                 {
 
